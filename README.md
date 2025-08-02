@@ -2,6 +2,8 @@
 
 **Open Builder by Hossein Pira** - A powerful, free and open-source visual website builder that allows you to create stunning web pages through an intuitive drag-and-drop interface.
 
+![Open Builder Hero](public/image.png)
+
 ## 🌟 Features
 
 - **Visual Drag & Drop Interface**: Build websites by simply dragging components onto the canvas
