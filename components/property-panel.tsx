@@ -223,9 +223,8 @@ export function PropertyPanel({
             member1bio: "Member 1 Bio",
             member2name: "Member 2 Name",
             member2role: "Member 2 Role",
-            member2bio: "Member 2 Bio",
-            member3name: "Member 3 Name",
-            member3role: "Member 3 Role",
+            member2bio: "Member 3 Name",
+            member3name: "Member 3 Role",
             member3bio: "Member 3 Bio",
           },
           buttons: {
@@ -331,6 +330,173 @@ export function PropertyPanel({
           },
           buttons: {
             primary: "Primary Button",
+          },
+        }
+      case "navbarModern":
+        return {
+          texts: {
+            brand: "Brand Name",
+            nav1: "Nav Item 1",
+            nav2: "Nav Item 2",
+            nav3: "Nav Item 3",
+            nav4: "Nav Item 4",
+            nav5: "Nav Item 5",
+          },
+          buttons: {
+            cta: "CTA Button",
+          },
+        }
+      case "navbarMinimal":
+        return {
+          texts: {
+            brand: "Brand Name",
+            nav1: "Nav Item 1",
+            nav2: "Nav Item 2",
+            nav3: "Nav Item 3",
+            nav4: "Nav Item 4",
+          },
+          buttons: {
+            contact: "Contact Button",
+          },
+        }
+      case "navbarCentered":
+        return {
+          texts: {
+            brand: "Brand Name",
+            nav1: "Nav Item 1",
+            nav2: "Nav Item 2",
+            nav3: "Nav Item 3",
+            nav4: "Nav Item 4",
+            nav5: "Nav Item 5",
+          },
+          buttons: {
+            cta: "CTA Button",
+          },
+        }
+      case "navbarSidebar":
+        return {
+          texts: {
+            brand: "Brand Name",
+            nav1: "Nav Item 1",
+            nav2: "Nav Item 2",
+            nav3: "Nav Item 3",
+            nav4: "Nav Item 4",
+            username: "User Name",
+            userrole: "User Role",
+          },
+          buttons: {
+            cta: "CTA Button",
+          },
+        }
+      case "testimonialCard":
+        return {
+          texts: {
+            quote: "Testimonial Quote",
+            name: "Customer Name",
+            title: "Customer Title",
+            company: "Company Name",
+          },
+          buttons: {},
+        }
+      case "pricingCard":
+        return {
+          texts: {
+            planname: "Plan Name",
+            price: "Price",
+            description: "Plan Description",
+            feature1: "Feature 1",
+            feature2: "Feature 2",
+            feature3: "Feature 3",
+            feature4: "Feature 4",
+            feature5: "Feature 5",
+            note: "Note Text",
+          },
+          buttons: {
+            cta: "CTA Button",
+          },
+        }
+      case "contactForm":
+        return {
+          texts: {
+            title: "Form Title",
+            description: "Form Description",
+          },
+          buttons: {
+            submit: "Submit Button",
+          },
+        }
+      case "imageGallery":
+        return {
+          texts: {
+            title: "Gallery Title",
+            description: "Gallery Description",
+          },
+          buttons: {
+            viewmore: "View More Button",
+          },
+        }
+      case "videoSection":
+        return {
+          texts: {
+            title: "Video Title",
+            description: "Video Description",
+            duration: "Duration",
+            views: "View Count",
+            date: "Date",
+          },
+          buttons: {
+            cta: "CTA Button",
+          },
+        }
+      case "faqSection":
+        return {
+          texts: {
+            title: "FAQ Title",
+            description: "FAQ Description",
+            question1: "Question 1",
+            answer1: "Answer 1",
+            question2: "Question 2",
+            answer2: "Answer 2",
+            question3: "Question 3",
+            answer3: "Answer 3",
+            question4: "Question 4",
+            answer4: "Answer 4",
+            contacttext: "Contact Text",
+          },
+          buttons: {
+            contact: "Contact Button",
+          },
+        }
+      case "blogCard":
+        return {
+          texts: {
+            category: "Category",
+            date: "Date",
+            title: "Blog Title",
+            excerpt: "Blog Excerpt",
+            author: "Author Name",
+            readtime: "Read Time",
+          },
+          buttons: {
+            readmore: "Read More Button",
+          },
+        }
+      case "statsCounter":
+        return {
+          texts: {
+            title: "Stats Title",
+            description: "Stats Description",
+            stat1: "Stat 1",
+            stat1label: "Stat 1 Label",
+            stat2: "Stat 2",
+            stat2label: "Stat 2 Label",
+            stat3: "Stat 3",
+            stat3label: "Stat 3 Label",
+            stat4: "Stat 4",
+            stat4label: "Stat 4 Label",
+          },
+          buttons: {
+            cta: "CTA Button",
           },
         }
       default:
@@ -1135,7 +1301,7 @@ export function PropertyPanel({
                         <div className="flex items-center space-x-2">
                           <Slider
                             value={[Number.parseFloat(block.editableProps?.styles?.blur || "0")]}
-                            onValueChange={([value]) => updateComponentStyles({ blur: `${value}px` })}
+                            onChange={([value]) => updateComponentStyles({ blur: `${value}px` })}
                             max={20}
                             min={0}
                             step={1}
@@ -1151,7 +1317,7 @@ export function PropertyPanel({
                         <div className="flex items-center space-x-2">
                           <Slider
                             value={[Number.parseFloat(block.editableProps?.styles?.brightness || "1")]}
-                            onValueChange={([value]) => updateComponentStyles({ brightness: value.toString() })}
+                            onChange={([value]) => updateComponentStyles({ brightness: value.toString() })}
                             max={2}
                             min={0}
                             step={0.1}
@@ -1169,7 +1335,7 @@ export function PropertyPanel({
                         <div className="flex items-center space-x-2">
                           <Slider
                             value={[Number.parseFloat(block.editableProps?.styles?.contrast || "1")]}
-                            onValueChange={([value]) => updateComponentStyles({ contrast: value.toString() })}
+                            onChange={([value]) => updateComponentStyles({ contrast: value.toString() })}
                             max={2}
                             min={0}
                             step={0.1}
@@ -1185,7 +1351,7 @@ export function PropertyPanel({
                         <div className="flex items-center space-x-2">
                           <Slider
                             value={[Number.parseFloat(block.editableProps?.styles?.saturate || "1")]}
-                            onValueChange={([value]) => updateComponentStyles({ saturate: value.toString() })}
+                            onChange={([value]) => updateComponentStyles({ saturate: value.toString() })}
                             max={2}
                             min={0}
                             step={0.1}
@@ -1206,7 +1372,7 @@ export function PropertyPanel({
                   <div className="space-y-2 mt-1">
                     <Select
                       value={block.editableProps?.styles?.transition || "none"}
-                      onValueChange={(value) => updateComponentStyles({ transition: value })}
+                      onChange={(value) => updateComponentStyles({ transition: value })}
                     >
                       <SelectTrigger className="h-8">
                         <SelectValue />

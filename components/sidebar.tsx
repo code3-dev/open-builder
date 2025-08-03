@@ -31,7 +31,8 @@ export function Sidebar({
   onOpenSettings,
 }: SidebarProps) {
   const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({
-    "Hero Sections": true,
+    Navigation: true,
+    "Hero Sections": false,
     "About Sections": false,
     "Footer Sections": false,
     "Basic Components": false,
